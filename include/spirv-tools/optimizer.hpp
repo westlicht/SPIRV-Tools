@@ -574,6 +574,10 @@ Optimizer::PassToken CreateRedundantLineInfoElimPass();
 // The pass remaps result ids to a compact and gapless range starting from %1.
 Optimizer::PassToken CreateCompactIdsPass();
 
+// Creates a consecutive result ids pass.
+// The pass remaps result ids to a consecutive range starting from %1.
+Optimizer::PassToken CreateConsecutiveResultIdsPass();
+
 // Creates a remove duplicate pass.
 // This pass removes various duplicates:
 // * duplicate capabilities;

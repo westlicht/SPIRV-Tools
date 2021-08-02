@@ -27,6 +27,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   combine_access_chains.h
   compact_ids_pass.h
   composite.h
+  consecutive_result_ids_pass.h
   const_folding_rules.h
   constants.h
   control_dependence.h
@@ -149,6 +150,7 @@ set(SPIRV_TOOLS_OPT_SOURCES
   combine_access_chains.cpp
   compact_ids_pass.cpp
   composite.cpp
+  consecutive_result_ids_pass.cpp
   const_folding_rules.cpp
   constants.cpp
   control_dependence.cpp

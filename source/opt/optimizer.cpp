@@ -417,6 +417,8 @@ bool Optimizer::RegisterPassFromFlag(const std::string& flag,
     RegisterPass(CreateFlattenDecorationPass());
   } else if (pass_name == "compact-ids") {
     RegisterPass(CreateCompactIdsPass());
+  } else if (pass_name == "consecutive-result-ids") {
+    RegisterPass(CreateConsecutiveResultIdsPass());
   } else if (pass_name == "cfg-cleanup") {
     RegisterPass(CreateCFGCleanupPass());
   } else if (pass_name == "local-redundancy-elimination") {
@@ -895,6 +897,11 @@ Optimizer::PassToken CreateRedundantLineInfoElimPass() {
 Optimizer::PassToken CreateCompactIdsPass() {
   return MakeUnique<Optimizer::PassToken::Impl>(
       MakeUnique<opt::CompactIdsPass>());
+}
+
+Optimizer::PassToken CreateConsecutiveResultIdsPass() {
+  return MakeUnique<Optimizer::PassToken::Impl>(
+      MakeUnique<opt::ConsecutiveResultIdsPass>());
 }
 
 Optimizer::PassToken CreateMergeReturnPass() {

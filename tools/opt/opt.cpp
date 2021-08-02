@@ -126,6 +126,9 @@ Options (in lexicographical order):)",
                Remap result ids to a compact range starting from %%1 and without
                any gaps.)");
   printf(R"(
+  --consecutive-result-ids
+               Remap result ids to a consecutive range starting from %%1.)");
+  printf(R"(
   --convert-local-access-chains
                Convert constant index access chain loads/stores into
                equivalent load/stores with inserts and extracts. Performed
